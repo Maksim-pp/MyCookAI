@@ -1,0 +1,79 @@
+.block{
+    margin: 0px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &__img{
+        width: 100%;
+        height: auto;
+        border-radius: 16px ;
+    }
+    &__h1{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    &__time{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &__item{
+            width: 100px;
+            &__icon{
+                width: 40px;
+                height: auto;
+                fill: none;
+            }
+            &__text{
+                font-weight: bold;
+                color: gray;
+            }
+        }
+    }
+    &__head{
+        margin: 0px 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        &__icon{
+            width: 40px;
+            height: auto;
+        }
+        &__text{
+            font-weight: 600;
+        }
+    }
+    &__item{
+        margin: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5px;
+        &__el{
+            color: #FFFFFF;
+            background-color: rgb(var(--color-light-orange));
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+        &__ol{
+            margin-left: 20px;
+            text-align: left;
+            &__li{
+                padding-bottom: 10px;
+                font-weight: 600;
+                &::marker{
+                    color: rgb(var(--color-light-orange));
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    
+}
+

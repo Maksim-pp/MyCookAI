@@ -1,0 +1,25 @@
+.block{
+    padding: 30px 10px 20px 20px;
+    background-color: #348E5A;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 10px;
+    border-radius: 0px 0px 10px 10px;
+    &__icon {
+        width: 26px;
+        height: auto;
+    }
+    &__link {
+        &__icon{
+            background-color: rgb(var(--color-green));
+            padding: 5px 10px;
+            border-radius: 6px;
+            width: 35px;
+            height: auto;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.button {
+    cursor: pointer;
+    width: 25x;
+    height: 25px;
+    background-color: #FFFFFF;
+    &__icon{
+        width: 25px;
+        height: 25px;
+        fill: #FFFFFF;
+    }
+}

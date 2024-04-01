@@ -1,0 +1,25 @@
+.block{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    &__item{
+        text-align: center;
+        &__img {
+            z-index: 20;
+        }
+        &__h1{
+            z-index: 21;
+            margin-top: -100px;
+            color: #FFFFFF;
+            font-size: 23px;
+            font-weight: bold;
+        }
+        &__link{
+            z-index: 21;
+            margin-left: 230px;
+        }
+    }
+    
+}

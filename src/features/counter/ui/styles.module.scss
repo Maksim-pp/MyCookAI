@@ -1,0 +1,17 @@
+.block{
+    width: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__button{
+        cursor: pointer;
+        width: 20px;
+        border-radius: 6px;
+        background-color: rgb(var(--color-orange));
+        color: #FFFFFF;
+    }
+    &__count{
+        color: rgb(var(--color-orange));
+    }
+
+}

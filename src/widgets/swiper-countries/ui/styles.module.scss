@@ -1,0 +1,12 @@
+.block{
+    width: 350px;
+    &__item{
+        cursor: pointer;
+        
+        &__img{
+            border-radius: 6px;
+            max-width: 160px;
+            height: 180px;
+        }
+    }
+}

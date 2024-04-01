@@ -1,0 +1,33 @@
+.block {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    gap: 10px;
+    &__item{
+        cursor: pointer;
+        width: 150px;
+        border-radius: 6px;
+        &__img {
+            border-radius: 6px;
+            width: 150px;
+            height: auto;
+        }
+        &__text {
+            background-color: rgb(var(--color-light-orange));
+            border-radius: 6px;
+            padding: 5px 10px;
+            color: #FFFFFF;
+            font-size: 14px;
+            font-weight: bold;
+            opacity: 0.8;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    
+    
+}
