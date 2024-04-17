@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC, useEffect } from "react"
 import { Route, Routes } from "react-router-dom"
 import { CreateRecipe } from "src/pages/create-recipe"
 import { Home } from "src/pages/home"
@@ -11,9 +11,18 @@ import { Registration } from "src/pages/registration"
 import { ShoppingList } from "src/pages/shopping-list"
 import { CREATE_RECIPE_PATH, HOME_PATH, LIBRARY_PATH, 
   PROFILE_PATH, RECIPES, REGISTRATION_PATH, SHOP_LIST_PATH } from "src/shared"
+import { useAppDispatch, useAppSelector } from "src/store"
+import { fetchRecipes } from "src/store/reducers/ActionCreators"
 
 
 export const Routing:FC = () => {
+
+  const dispatch = useAppDispatch()
+  useEffect(() => {
+    dispatch(fetchRecipes())
+  }, [])
+
+
   return (
     <div>
       <Main />

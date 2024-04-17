@@ -1,14 +1,17 @@
-import  { FC,  } from 'react'
+import  { FC } from 'react'
 import styles from './styles.module.scss'
-import { fetchRecipes } from 'src/entities/lib'
 import { NavLink } from 'react-router-dom'
-import { RECIPES } from 'src/shared'
+import { Preloader, RECIPES } from 'src/shared'
+import { useAppSelector } from 'src/store'
 
 export const Recipes:FC = () => {
-    const {recipes} = fetchRecipes()
-    
+  const {recipes, error,isLoading} = useAppSelector((state)=> state.recipes)
+
+
   return (
     <div className={styles.block}>
+        {isLoading && <Preloader />}
+        {error && <h1>{error}</h1>}
         {
             recipes.map((el)=> (
                 <NavLink to={`${RECIPES}`+ el.name } state={{
@@ -18,8 +21,6 @@ export const Recipes:FC = () => {
                     instructions: el.instructions,
                     prepTimeMinutes: el.prepTimeMinutes,
                     cookTimeMinutes: el.cookTimeMinutes,
-                    servings: el.servings,
-                    difficulty: el.difficulty,
                     cuisine: el.cuisine,
                 }} key={el.id} className={styles.block__item}>
                     <img src={el.image} alt="Фото еды" className={styles.block__item__img}/>
@@ -27,6 +28,7 @@ export const Recipes:FC = () => {
                 </NavLink>
             ))
         }
+        
     </div>
   )
 }

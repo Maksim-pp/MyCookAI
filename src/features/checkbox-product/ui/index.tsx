@@ -1,12 +1,8 @@
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import { ICheckboxProductProps, Icon } from 'src/shared'
 import styles from './styles.module.scss'
 
-export const CheckboxProduct:FC<ICheckboxProductProps> = ({className}) => {
-    const [isChecked, setIsCheck] = useState<boolean>(false)
-    const clickHandler =()=>{
-      setIsCheck(!isChecked);
-    }
+export const CheckboxProduct:FC<ICheckboxProductProps> = ({isChecked, className, clickHandler}) => {
 
     const classes = className ? `${className} ${styles.checkbox}` : styles.checkbox;
     const checkboxClasses = isChecked ? `${classes} ${styles.checkbox_active}` : classes;

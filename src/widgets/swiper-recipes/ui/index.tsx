@@ -1,14 +1,17 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import styles from './styles.module.scss'
-import { fetchRecipes } from 'src/entities/lib'
-import { NavLink } from 'react-router-dom'
+import { NavLink, json } from 'react-router-dom'
 import { RECIPES } from 'src/shared'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules'
+import { useAppDispatch, useAppSelector } from 'src/store'
+import { fetchRecipes } from 'src/store/reducers/ActionCreators'
 
 export const SwiperSliderRecipes: FC = () => {
-    const { recipes } = fetchRecipes()
+    const dispatch = useAppDispatch()
+    const {recipes, error,isLoading} = useAppSelector((state)=> state.recipes)
+
     
     return (
         <Swiper className={styles.block}
@@ -21,6 +24,8 @@ export const SwiperSliderRecipes: FC = () => {
                 delay: 2000
             }}
             >
+            {isLoading && <h1>Загружаем</h1>}
+            {error && <h1>{error}</h1>}
             {
                 recipes.map((el) => (
                     <SwiperSlide key={el.id} className={styles.block__slide}>
@@ -33,8 +38,6 @@ export const SwiperSliderRecipes: FC = () => {
                                 instructions: el.instructions,
                                 prepTimeMinutes: el.prepTimeMinutes,
                                 cookTimeMinutes: el.cookTimeMinutes,
-                                servings: el.servings,
-                                difficulty: el.difficulty,
                                 cuisine: el.cuisine,
                             }} className={styles.block__slide__item}>
                             <img src={el.image} alt="Фото еды" className={styles.block__slide__item__img} />

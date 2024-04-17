@@ -41,13 +41,6 @@ export const Recipe:FC= () => {
             }
         </div>
         <div className={styles.block__head}>
-            <Icon icon='corolla' className={styles.block__head__icon}/>
-            <p className={styles.block__head__text}>Утварь</p>
-        </div>
-        <div className={styles.block__item}>
-            {}
-        </div>
-        <div className={styles.block__head}>
             <Icon icon='preparation' className={styles.block__head__icon}/>
             <p className={styles.block__head__text}>Инструкция</p>
         </div>

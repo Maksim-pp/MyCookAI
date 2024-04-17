@@ -5,8 +5,6 @@ export interface IRecipes {
     instructions: [] | string
     prepTimeMinutes: number
     cookTimeMinutes: number
-    servings: number
-    difficulty: string
     cuisine: string
     image: string
 }

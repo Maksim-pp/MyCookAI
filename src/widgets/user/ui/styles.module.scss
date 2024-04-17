@@ -1,0 +1,22 @@
+.block {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 50px;
+    &__user{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+
+        &__icon{
+            width: 26px;
+            height: 26px;
+        }
+        &__field{
+            padding: 5px;
+        }
+    }
+}

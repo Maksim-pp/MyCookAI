@@ -1,11 +1,12 @@
+
 import './index.scss'
 import { Routing } from './routing'
 
-function App() {
 
+function App() {
   return (
     <div className='block'>
-      <Routing />
+      <Routing  />
     </div>
   )
 }

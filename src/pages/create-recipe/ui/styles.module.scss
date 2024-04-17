@@ -1,0 +1,124 @@
+.block {
+    padding-bottom: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #EAFAF1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &__logo {
+        width: 175px;
+        margin: 0px auto;
+    }
+    &__foto {
+        &__img{
+            position: relative;
+        }
+        &__field{
+            position: absolute;
+            margin-top: -140px;
+            margin-left: -95px;
+            width: 165px;
+            height: 44px;
+            border-radius: 20px;
+            padding-left: 10px;
+        }
+    }
+    &__h1{
+        padding: 5px 10px;
+        border-radius: 8px;
+    }
+    &__info{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 10px;
+        &__text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            align-items: center;
+            &__time {
+                border-radius: 6px;
+                width: 120px;
+                padding: 5px 10px;
+            }
+        }
+    }
+    &__textarea{
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        &__ingredient {
+            color: #FFFFFF;
+            background-color: rgb(var(--color-light-orange));
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+        &__text{
+            padding: 10px 15px;
+        }
+    }
+    &__button {
+        cursor: pointer;
+        margin: auto;
+        width: 210px;
+        height: 50px;
+        color: #FFFFFF;
+        font-weight: bold;
+        font-size: 16px;
+        background-color: rgb(var(--color-light-orange));
+        border-radius: 50px;
+        &__arr{
+            cursor: pointer;
+            color: #FFFFFF;
+            margin: auto;
+            font-weight: bold;
+            font-size: 12px;
+            background-color: rgb(var(--color-light-orange));
+            border-radius: 50px;
+            width: 100px;
+            height: 40px;
+        }
+    }
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    fill: none;
+}
+.ingredients {
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 5px;
+    &__ingredient{
+        word-break: break-all;
+        color: #FFFFFF;
+        background-color: rgb(var(--color-light-orange));
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
+}
+.ol{
+    width: 300px;
+    margin-left: 20px;
+    text-align: left;
+    &__li{
+        word-break: break-all;
+        padding-bottom: 10px;
+        font-weight: 600;
+        &::marker{
+            color: rgb(var(--color-light-orange));
+            font-size: 20px;
+        }
+    }
+}

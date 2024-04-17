@@ -1,23 +1,20 @@
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import styles from './styles.module.scss'
 import { Button } from 'src/shared'
 
-export const Counter:FC = () => {
-  const [count, setCount] = useState(1)
+interface ICounterProps {
+  count: number
+  Decrement:()=> void
+  Increment: () => void
+}
 
-  const Increment = ()=>{
-    setCount(count + 1)
-  }
-
-  const Decrement = ()=>{
-    setCount(count - 1)
-  }
+export const Counter: FC<ICounterProps> = ({count, Decrement, Increment}) => {
 
   return (
     <div className={styles.block}>
-        <Button className={styles.block__button} onClick={Decrement}>-</Button>
-        <span className={styles.block__count}>{count}</span>
-        <Button className={styles.block__button} onClick={Increment}>+</Button>
+      <Button className={styles.block__button} onClick={Decrement}>-</Button>
+      <span className={styles.block__count}>{count}</span>
+      <Button className={styles.block__button} onClick={Increment}>+</Button>
     </div>
   )
 }

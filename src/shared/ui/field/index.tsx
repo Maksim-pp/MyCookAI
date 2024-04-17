@@ -1,8 +1,8 @@
 import { FC } from 'react'
 import { IFieldProps } from 'src/shared'
 
-export const Field:FC<IFieldProps> = ({className,placeholder, maxLength}) => {
+export const Field:FC<IFieldProps> = ({className,placeholder, maxLength, type, value, changeHandler}) => {
   return (
-    <input type="text" placeholder={placeholder} className={className} maxLength={maxLength}/>
+    <input type={type} placeholder={placeholder} className={className} maxLength={maxLength} value={value} onChange={changeHandler}/>
   )
 }
