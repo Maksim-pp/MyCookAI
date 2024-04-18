@@ -9,7 +9,7 @@ export const CheckboxProduct:FC<ICheckboxProductProps> = ({isChecked, className,
 
   return (
     <div className={checkboxClasses} onClick={clickHandler}>
-      <Icon icon='check-mark' className={styles.checkbox__mark}/>
+      <Icon icon='checkMark' className={styles.checkbox__mark}/>
     </div>
   )
 }

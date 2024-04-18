@@ -1,0 +1,21 @@
+.block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 360px;
+    &__input{
+        padding: 5px;
+        width: 300px;
+        border: 2px solid rgb(var(--color-light-orange));
+        border-radius: 6px;
+    }
+    &__button{
+        padding: 10px 15px;
+        color: #FFFFFF;
+        background-color: rgb(var(--color-light-orange));
+        border-radius: 6px;
+        cursor: pointer;
+    }
+}

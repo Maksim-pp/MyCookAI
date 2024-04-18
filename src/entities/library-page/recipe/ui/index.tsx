@@ -17,7 +17,7 @@ export const Recipe:FC= () => {
                 <p className={styles.block__time__item__text}>Подготовка {prepTimeMinutes} мин.</p>
             </div>
             <div className={styles.block__time__item}>
-                <Icon icon='chef-hat' className={styles.block__time__item__icon}/>
+                <Icon icon='chefHat' className={styles.block__time__item__icon}/>
                 <p className={styles.block__time__item__text}>Готовка <br />{cookTimeMinutes} мин.</p>
             </div>
             <div className={styles.block__time__item}>

@@ -1,24 +1,33 @@
 import { FC, useState } from 'react'
 import styles from './styles.module.scss'
-import { Logo, Preloader, RECIPES } from 'src/shared'
+import { LOGIN, Logo, Preloader, RECIPES, useAuth } from 'src/shared'
 import { NavButton } from 'src/widgets/nav-home-button'
 import { SwiperSliderRecipes } from 'src/widgets/swiper-recipes'
 import { SwiperSliderCountries } from 'src/widgets/swiper-countries'
-import { NavLink } from 'react-router-dom'
-import { useAppSelector } from 'src/store'
+import { NavLink, Navigate, } from 'react-router-dom'
+import { useAppDispatch, useAppSelector } from 'src/store'
+import userSlice from 'src/store/userSlice'
+
+// сделать редирект
 
 export const Home: FC = () => {
   const { recipes, error, isLoading } = useAppSelector((state) => state.recipes)
-
+  const dispatch= useAppDispatch()
+  const {removeUser} = userSlice
+  const {isAuth, email} = useAuth()
   
   const [selectRecipes, setSelectRecipes] = useState(recipes)
   const clickHandler = (cuisine: string | undefined) => {
     console.log(setSelectRecipes(recipes.filter(el => el.cuisine == cuisine)))
   }
 
-  return (
+    return  isAuth ? (
     <div className={styles.block}>
-      <Logo className={styles.block__logo} />
+      <div className={styles.block__head}>
+        <Logo className={styles.block__logo} />
+      <button className={styles.block__signup} onClick={()=>dispatch(removeUser())}>Выйти<br />{email}</button>
+      </div>
+      
       <NavButton />
       <h1 className={styles.block__h1}>Ваши рецепты</h1>
       <SwiperSliderRecipes />
@@ -43,5 +52,7 @@ export const Home: FC = () => {
         ))
       }
     </div>
+  ) :(
+    <Navigate to={LOGIN}/>
   )
 }

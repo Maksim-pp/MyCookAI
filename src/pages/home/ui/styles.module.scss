@@ -9,10 +9,24 @@
     flex-wrap: nowrap;
     gap: 20px;
     z-index: 60;
+    &__head{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
     &__logo{
         text-align: left;
         max-width: 100px;
         height: auto;
+    }
+    &__signup{
+        padding: 5px 10px;
+        color: #FFFFFF;
+        background-color: rgb(var(--color-light-orange));
+        border-radius: 6px;
+        cursor: pointer;
     }
     &__h1{
         font-size: 16px;

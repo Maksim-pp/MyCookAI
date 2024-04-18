@@ -1,0 +1,21 @@
+.block {
+    margin-top: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    &__h1{
+        color: rgb(var(--color-light-orange));
+    }
+    &__p{
+        color: rgb(var(--color-light-orange));
+        &__link{
+            color: rgb(var(--color-orange));
+            cursor: pointer;
+            &:hover{
+                color: rgb(var(--color-light-orange));
+            }
+        }
+    }
+}

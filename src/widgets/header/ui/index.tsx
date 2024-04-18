@@ -13,7 +13,7 @@ export const Header:FC = () => {
         <Icon icon='home' className={styles.link__icon}/>
       </NavLink>
       <NavLink to={SHOP_LIST_PATH} className={({isActive})=> classes(isActive)}>
-        <Icon icon='shopping-list' className={styles.link__icon}/>
+        <Icon icon='shoppingList' className={styles.link__icon}/>
       </NavLink>
       <NavLink to={CREATE_RECIPE_PATH} className={({isActive})=> classes(isActive)}>
         <Icon icon='plus' className={styles.link__icon}/>

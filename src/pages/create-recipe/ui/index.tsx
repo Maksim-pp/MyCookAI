@@ -87,7 +87,7 @@ export const CreateRecipe: FC = () => {
           <Field type='number' placeholder='Подготовка мин.' className={styles.block__info__text__time} changeHandler={changeHandlerPrepTimeMinutes} value={prepTimeMinutes} />
         </div>
         <div className={styles.block__info__text}>
-          <Icon icon='microwave-preparations' className={styles.icon} />
+          <Icon icon='microwavePreparations' className={styles.icon} />
           <Field type='number' placeholder='Готовка мин.' className={styles.block__info__text__time} changeHandler={changeHandlerCookTimeMinutes} value={cookTimeMinutes} />
         </div>
         <div className={styles.block__info__text}>
@@ -108,7 +108,7 @@ export const CreateRecipe: FC = () => {
         <Button className={styles.block__button__arr} onClick={onChangeIngredients}>Добавить Ингредиент</Button>
       </div>
       <div className={styles.block__textarea}>
-        <Icon icon='cooking-plates' className={styles.icon} />
+        <Icon icon='cookingPlates' className={styles.icon} />
         <ol className={styles.ol}>
           {
             instructions.map((el:any)=>(

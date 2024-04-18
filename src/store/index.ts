@@ -3,11 +3,13 @@ import { productReducer } from './productSlice';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import { recipeReducer } from './recipeSlice';
 import { profileReducer } from './profilSlice';
+import { userReducer } from './userSlice';
 
 const rootReducer = combineReducers({
     product: productReducer,
     recipes: recipeReducer,
     profile: profileReducer,
+    user: userReducer,
 })
 
 const store = configureStore({
