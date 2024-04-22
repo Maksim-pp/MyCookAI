@@ -23,7 +23,6 @@ export const CreateRecipe: FC = () => {
   const [ingredients, setIngredients] = useState<any>([])
   const [instruction, setInstruction] = useState<string>('')
   const [instructions, setInstructions] = useState<any>([])
-  const id = Date.now()
 
   const recipesData: IRecipes = {
     id: Date.now(),

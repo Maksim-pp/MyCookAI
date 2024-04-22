@@ -1,4 +1,3 @@
-import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { REGISTER } from 'src/shared'
 import { Login } from 'src/widgets/login'

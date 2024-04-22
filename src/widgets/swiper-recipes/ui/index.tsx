@@ -1,15 +1,13 @@
-import { FC, useEffect } from 'react'
+import { FC } from 'react'
 import styles from './styles.module.scss'
-import { NavLink, json } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { RECIPES } from 'src/shared'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules'
-import { useAppDispatch, useAppSelector } from 'src/store'
-import { fetchRecipes } from 'src/store/reducers/ActionCreators'
+import { useAppSelector } from 'src/store'
 
 export const SwiperSliderRecipes: FC = () => {
-    const dispatch = useAppDispatch()
     const {recipes, error,isLoading} = useAppSelector((state)=> state.recipes)
 
     

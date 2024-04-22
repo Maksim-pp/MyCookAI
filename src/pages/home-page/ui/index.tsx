@@ -1,4 +1,3 @@
-import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { CreateRecipe } from 'src/pages/create-recipe'
 import { Home } from 'src/pages/home/ui'

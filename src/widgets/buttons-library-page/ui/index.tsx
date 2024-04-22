@@ -1,6 +1,5 @@
 import { FC } from "react"
 import styles from './styles.module.scss'
-import { Head, Icon } from "src/shared"
 import { HeadLibrary } from "src/entities/head-pages/head-library-page"
 import { BannersButtons } from "src/entities/library-page/buttons"
 

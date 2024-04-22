@@ -1,4 +1,3 @@
-import { FC } from 'react'
 import { useAppDispatch } from 'src/store'
 import userSlice from 'src/store/userSlice'
 import { Form } from 'src/widgets/form';

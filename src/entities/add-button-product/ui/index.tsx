@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import styles from './styles.module.scss'
 import { Button, Icon } from 'src/shared'
 import { IAddButtonsProps } from 'src/entities/lib/types/add-button-product-types'
