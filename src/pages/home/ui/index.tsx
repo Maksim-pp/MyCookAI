@@ -7,8 +7,7 @@ import { SwiperSliderCountries } from 'src/widgets/swiper-countries'
 import { NavLink, Navigate, } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from 'src/store'
 import userSlice from 'src/store/userSlice'
-
-// сделать редирект
+import { IRecipes } from 'src/entities/lib'
 
 export const Home: FC = () => {
   const { recipes, error, isLoading } = useAppSelector((state) => state.recipes)
@@ -16,12 +15,12 @@ export const Home: FC = () => {
   const {removeUser} = userSlice
   const {isAuth, email} = useAuth()
   
-  const [selectRecipes, setSelectRecipes] = useState(recipes)
+  const [selectRecipes, setSelectRecipes] = useState<IRecipes[]>([])
   const clickHandler = (cuisine: string | undefined) => {
-    console.log(setSelectRecipes(recipes.filter(el => el.cuisine == cuisine)))
+    setSelectRecipes(recipes.filter(el => el.cuisine == cuisine))
   }
-
-    return  isAuth ? (
+  
+  return  isAuth ? (
     <div className={styles.block}>
       <div className={styles.block__head}>
         <Logo className={styles.block__logo} />
